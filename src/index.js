@@ -48,4 +48,4 @@ app.put('/paied', jsonParser, (req, res) => {
   res.sendStatus(200)
 })
 
-app.listen(4000)
+app.listen(process.env.PORT || 4000)
