@@ -44,10 +44,11 @@ class Db {
   }
   addWord(word, price){
     if(this._wordExists(word)) throw new Error('Word already exists')
-    this.data.rude_words.add({
+    console.log(this.data.rude_words)
+    this.data.rude_words.push({
       name: word,
       price: price,
-      count: 0
+      count: 1
     })
     this.save()
   }
